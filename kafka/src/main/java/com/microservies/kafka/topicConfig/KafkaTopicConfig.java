@@ -1,4 +1,4 @@
-package com.microservies.kafka.config;
+package com.microservies.kafka.topicConfig;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;
@@ -9,8 +9,13 @@ import org.springframework.kafka.config.TopicBuilder;
 public class KafkaTopicConfig {
 
     @Bean
-    public NewTopic testKafkaTopic(){
-        return TopicBuilder.name("testKafka")
-                .build();
+    public NewTopic topic1() {
+        return TopicBuilder.name("topic1").build();
     }
+
+    @Bean
+    public NewTopic topic2() {
+        return TopicBuilder.name("topic2").build();
+    }
+
 }
